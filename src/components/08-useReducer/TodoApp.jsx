@@ -1,4 +1,5 @@
 import React, { useReducer, useEffect } from "react";
+import TodoAdd from "./components/TodoAdd";
 import TodoList from "./components/TodoList";
 import "./style.css";
 import { todoReducer } from "./todoReducer";
@@ -31,6 +32,7 @@ const TodoApp = () => {
 		});
 	};
 
+	// handledone
 	const handleToggle = (id) => {
 		dispatch({
 			type: "TOGGLE_TODO",
@@ -61,7 +63,7 @@ const TodoApp = () => {
 					/>
 				</div>
 				<div className="col">
-					<TodoApp handleAddTodo={handleAddTodo} />
+					<TodoAdd handleAddTodo={handleAddTodo} />
 				</div>
 			</div>
 		</div>
