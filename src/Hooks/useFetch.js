@@ -1,6 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const useFetch = (url) => {
+	// Referencias con useRef
+	const isMount = useRef(true);
+
+	// Effect
+	useEffect(() => {
+		return () => {
+			isMount.current = false;
+		};
+	}, []);
+
 	// state
 	const [state, setState] = useState({
 		data: null,
@@ -9,16 +19,15 @@ export const useFetch = (url) => {
 	});
 
 	useEffect(() => {
-		setState({ data: null, loading: true, error: null });
-
-		fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
-				setState({ data, loading: false, error: null });
-			})
-			.catch((error) => {
-				setState({ error, loading: true });
-			});
+		setTimeout(() => {
+			if (isMount.current) {
+				console.log("Fetch");
+				setState({ data: null, loading: true, error: null });
+				fetch(url)
+					.then((res) => res.json())
+					.then((data) => setState({ data, loading: false, error: null }));
+			} else console.log("No se llamo al setState");
+		}, 1000);
 	}, [url]);
 
 	return state;
