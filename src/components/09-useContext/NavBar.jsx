@@ -5,7 +5,7 @@ const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 			<div className="container-fluid">
-				<NavLink className="navbar-brand" to="#">
+				<NavLink className="navbar-brand" exact to="/">
 					UseContext
 				</NavLink>
 
