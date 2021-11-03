@@ -21,6 +21,8 @@ const TodoListItems = ({ todo, index, handleDelete, handleToggle }) => {
 		</li>
 	);
 };
+// si esta envuelto en un memo , en los test no se muestra como deberia ser
+// TodoListItems.displayName = "TodoListItems";
 
 // PropTypes requeridos
 TodoListItems.propTypes = {
@@ -30,4 +32,4 @@ TodoListItems.propTypes = {
 	handleToggle: PropTypes.func.isRequired,
 };
 
-export default React.memo(TodoListItems);
+export default React.memo(TodoListItems).displayName = "TodoListItems";
