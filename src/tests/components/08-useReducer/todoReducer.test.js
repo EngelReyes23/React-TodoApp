@@ -14,7 +14,7 @@ describe("Pruebas en <todoReducer />", () => {
 			type: "ADD_TODO",
 			payload: {
 				id: 3,
-				text: "Nuevo Todo",
+				description: "Nuevo Todo",
 				done: false,
 			},
 		});
@@ -25,7 +25,7 @@ describe("Pruebas en <todoReducer />", () => {
 			...demoTodo,
 			{
 				id: 3,
-				text: "Nuevo Todo",
+				description: "Nuevo Todo",
 				done: false,
 			},
 		]);
@@ -43,7 +43,7 @@ describe("Pruebas en <todoReducer />", () => {
 		expect(state).toEqual([
 			{
 				id: 2,
-				text: "Engel Reyes",
+				description: "Engel Reyes",
 				done: false,
 			},
 		]);
@@ -59,12 +59,12 @@ describe("Pruebas en <todoReducer />", () => {
 		expect(state).toEqual([
 			{
 				id: 1,
-				text: "Hola Mundo",
+				description: "Hola Mundo",
 				done: false,
 			},
 			{
 				id: 2,
-				text: "Engel Reyes",
+				description: "Engel Reyes",
 				done: false,
 			},
 		]);
@@ -76,10 +76,10 @@ describe("Pruebas en <todoReducer />", () => {
 			type: "EDIT_TODO",
 			payload: {
 				id: 1,
-				text: "Todo Editado",
+				description: "Todo Editado",
 			},
 		});
 
-		expect(state[0].text).toBe("Todo Editado");
+		expect(state[0].description).toBe("Todo Editado");
 	});
 });

@@ -1,12 +1,12 @@
 export const demoTodo = [
 	{
 		id: 1,
-		text: "Hola Mundo",
+		description: "Hola Mundo",
 		done: true,
 	},
 	{
 		id: 2,
-		text: "Engel Reyes",
+		description: "Engel Reyes",
 		done: false,
 	},
 ];
