@@ -15,19 +15,18 @@ export const useFetch = (url) => {
 	const [state, setState] = useState({
 		data: null,
 		loading: true,
-		error: null,
+		error: false,
 	});
 
 	useEffect(() => {
-		setTimeout(() => {
-			if (isMount.current) {
-				console.log("Fetch");
-				setState({ data: null, loading: true, error: null });
-				fetch(url)
-					.then((res) => res.json())
-					.then((data) => setState({ data, loading: false, error: null }));
-			} else console.log("No se llamo al setState");
-		}, 1000);
+		if (isMount.current) {
+			console.log("Fetch");
+			setState({ data: null, loading: true, error: false });
+			fetch(url)
+				.then((res) => res.json())
+				.then((data) => setState({ data, loading: false, error: false }))
+				.catch(() => setState({ data: "Error", loading: true, error: true }));
+		} else console.log("No se llamo al setState");
 	}, [url]);
 
 	return state;
