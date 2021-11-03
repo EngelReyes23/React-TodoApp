@@ -1,23 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pruebas a <TodoListItems/> debe de mostrar el componente correctamente 1`] = `
-<li
-  className="list-group-item"
-  key="2"
->
-  <p
-    className="false"
-    onClick={[Function]}
-  >
-    2
-    - 
-    Engel Reyes
-  </p>
-  <button
-    className="btn btn-danger"
-    onClick={[Function]}
-  >
-    Delete
-  </button>
-</li>
+<TodoListItems
+  handleDelete={[MockFunction]}
+  handleToggle={[MockFunction]}
+  index={1}
+  todo={
+    Object {
+      "description": "Engel Reyes",
+      "done": false,
+      "id": 2,
+    }
+  }
+/>
 `;
