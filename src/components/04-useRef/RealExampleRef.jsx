@@ -3,7 +3,7 @@ import "../02-useEffect/Effect.css";
 import MultipleCustomHooks from "../03-examples/MultipleCustomHooks";
 
 const RealExampleRef = () => {
-	const [show, setShow] = useState(true);
+	const [show, setShow] = useState(false);
 
 	const handleClick = () => {
 		setShow(!show);
