@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <HomePage /> mostrar el componente correctamente 1`] = `
+Array [
+  <h1>
+    HomePage
+  </h1>,
+  <hr />,
+  <pre>
+    {
+     "name": "Engel",
+     "email": "correo@correo.com"
+}
+  </pre>,
+]
+`;
