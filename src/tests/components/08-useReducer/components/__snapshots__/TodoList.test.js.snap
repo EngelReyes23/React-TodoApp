@@ -16,6 +16,11 @@ exports[`Pruebas en <TodoList /> Debe de mostrar el componente correctamente 1`]
         "done": false,
         "id": 2,
       },
+      Object {
+        "description": "Hola Mundo",
+        "done": true,
+        "id": 3,
+      },
     ]
   }
 />

@@ -1,4 +1,4 @@
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
 import TodoList from "../../../../components/08-useReducer/components/TodoList";
 import { demoTodo } from "../../../fixtures/demoTodo";
 
@@ -6,7 +6,7 @@ describe("Pruebas en <TodoList />", () => {
 	// Preparacion del entorno
 	const handleToggle = jest.fn();
 	const handleDelete = jest.fn();
-	const wrapper = shallow(
+	const wrapper = mount(
 		<TodoList
 			todos={demoTodo}
 			handleToggle={handleToggle}

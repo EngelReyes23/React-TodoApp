@@ -4,12 +4,12 @@ exports[`Pruebas a <TodoListItems/> debe de mostrar el componente correctamente 
 <TodoListItems
   handleDelete={[MockFunction]}
   handleToggle={[MockFunction]}
-  index={1}
+  index={2}
   todo={
     Object {
-      "description": "Engel Reyes",
-      "done": false,
-      "id": 2,
+      "description": "Hola Mundo",
+      "done": true,
+      "id": 3,
     }
   }
 />
