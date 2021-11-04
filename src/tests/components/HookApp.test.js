@@ -1,5 +1,5 @@
 import HookApp from "../../HookApp";
-import shallow from "enzyme";
+import { shallow } from "enzyme";
 
 describe("Probando HooApp", () => {
 	// wrapper

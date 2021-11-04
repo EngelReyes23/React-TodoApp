@@ -4,7 +4,7 @@ import TodoListItems from "./TodoListItems";
 
 const TodoList = ({ todos, handleDelete, handleToggle }) => {
 	return (
-		<ol className="list-group list-group-flush">
+		<ul className="list-group list-group-flush">
 			{todos.map((todo, index) => (
 				<TodoListItems
 					key={todo.id}
@@ -14,7 +14,7 @@ const TodoList = ({ todos, handleDelete, handleToggle }) => {
 					handleToggle={handleToggle}
 				/>
 			))}
-		</ol>
+		</ul>
 	);
 };
 
@@ -31,4 +31,4 @@ TodoList.propTypes = {
 	handleToggle: PropTypes.func.isRequired,
 };
 
-export default React.memo(TodoList);
+export default React.memo(TodoList).displayName = "TodoList";

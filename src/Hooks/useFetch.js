@@ -26,7 +26,7 @@ export const useFetch = (url) => {
 				.then((res) => res.json())
 				.then((data) => setState({ data, loading: false, error: false }))
 				.catch(() => setState({ data: "Error", loading: true, error: true }));
-		} else console.log("No se llamo al setState");
+		}
 	}, [url]);
 
 	return state;
